@@ -15,6 +15,6 @@ contexto de control de versiones y desarrollo colaborativo utilizando Git y gith
 ### Tabla de Ejercicios 
 |No.|Descripcion|Potenciador|Estatus|
 |---|---|---|---|
-|1.|Declaracion de Variables|1|Terminado|
-|2.|Tipo de variables|2|Finalizado|
-
+|1.|Declaracion de Variables|1|Finalizado|
+|2.|Tipo de variables|7|Finalizado|
+|3.|Funciones|9|Finalizado
