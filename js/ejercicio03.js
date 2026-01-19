@@ -127,3 +127,54 @@ lastLogin= new Date("2025/12/31");
 console.log("Test 2 - Fecha de ultimo acceso es diferente a la fecha de hoy");
 console.log(`La fecha del último acceso es: ${lastLogin}`);
 console.log(`El usuario logeado es: ${isNewUser()?"Nuevo Usuario":"Usuario Antiguo"}`);
+
+
+//6. Funciones anonimas con parametros (version arrow o lambda)
+
+const sumar=(a,b)=>{
+    let resultado=a+b;      
+    return resultado;
+}
+console.warn("6.Funciones anonuima con parametros");
+console.log(`el resultado de la suma es 15+83 es: ${sumar(15,83)}`);
+/* cuando la funcion anonima tiene solo una li8nea de operacion se puede usar una version 
+simplificaada que no usa {} llaves , ni la palabra reservada return*/
+const multiplicar=(a,b)=>a*b;
+console.log(`el resultado de la suma de 15+125 es: ${multiplicar(15,125)}`);
+
+//7. Funciones Callback (Regreso de Llamado)
+console.warn("7.- Funciones Anónimas Callback (Respuesta)");
+const recoverPassword = function(email, callback)
+{
+    //Generamos el codigo a enviar al usuario
+    const recoveryCode = Math.floor(100000 + Math.random()*900000)
+
+    console.log(`
+        ======================================================
+        Solicitud de recuperación recibida
+        Correo del usuario solicitante: ${email}
+        Generando Codigo de Recuperacion...
+        Codigo de Seguridad Generado: ${recoveryCode}
+        Enviando el Correo al Usuario...
+        Correo Enviado a: ${email}, con el codigo de seguridad: ${recoveryCode}
+        ========================================================`);
+
+        //Definiendo la respuesta del sistema
+        const response = 
+        {
+            status:"Ok",
+            message: "Codigo de Recuperación Enviado Satisfactoriamente."
+        };
+        
+        callback(response);
+};
+
+//Invocación de una función callback
+recoverPassword("240463@utxicotepec.edu.mx",
+    function (systemResponse){
+        console.log("Respuesta del sistema: ");
+        console.log(systemResponse.message);
+    }
+);
+
+

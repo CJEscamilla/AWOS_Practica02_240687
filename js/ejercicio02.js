@@ -202,7 +202,7 @@ conciente que se ele asigno este valor */
 let isPremiumUser;
 let isUserLoged;
 var todayDate = new Date();
-var lastLogin = new todayDate();
+var lastLogin =  todayDate;
 let isNewUser; 
 
 console.warn(`Las variables del usuario son:
